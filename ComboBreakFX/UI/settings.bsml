@@ -1,0 +1,9 @@
+﻿<bg>
+  <vertical horizontal-fit='PreferredSize' vertical-fit='PreferredSize' preferred-width='90' spacing='0'
+            anchor-max-y='1.60'>
+    <bool-setting text='Mod Enabled' value='ModToggle' apply-on-change='true'/>
+    <bool-setting text='Only Count Miss' value='OnlyCountMiss' apply-on-change='true' hover-hint='Only have miss count towards combo break.'/>
+	<bool-setting text='Only Full Combo' value='OnlyFullCombo' apply-on-change='true' hover-hint='Only have full combo break count.'/>
+	  <slider-setting value ='MinComboBreak' show-buttons='true'  apply-on-change='true' text='Mininum Combo' increment='10' min='10' max='500' hover-hint='The minium combo to count'/>
+  </vertical>
+</bg>
