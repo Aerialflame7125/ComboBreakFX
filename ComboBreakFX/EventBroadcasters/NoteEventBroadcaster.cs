@@ -1,3 +1,4 @@
+using ComboBreakFX.Interfaces;
 using Zenject;
 
 namespace ComboBreakFX.EventBroadcasters
