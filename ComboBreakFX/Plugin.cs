@@ -13,8 +13,10 @@ using SiraUtil.Attributes;
 using SiraUtil.Zenject;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using ComboBreakFX.EventBroadcasters;
 using IPAConfig = IPA.Config.Config;
 using IPALogger = IPA.Logging.Logger;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace ComboBreakFX
@@ -26,6 +28,8 @@ namespace ComboBreakFX
         internal static IPALogger Log { get; private set; }
 
         internal static Harmony harmony;
+
+        internal static GameObject bdc;
 
 
         [Init]
@@ -64,6 +68,7 @@ namespace ComboBreakFX
         public void OnApplicationStart()
         {
             Log.Debug("OnApplicationStart");
+            bdc = new GameObject("ComboBreakFXBroadcaster").AddComponent<NoteEventBroadcaster>();
             //new GameObject("ComboBreakFXController").AddComponent<ComboBreakFXController>();
 
         }

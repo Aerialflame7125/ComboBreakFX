@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using ComboBreakFX;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
 namespace ComboBreakFX.HarmonyPatches
 {
@@ -16,6 +17,8 @@ namespace ComboBreakFX.HarmonyPatches
         {
             Plugin.Log.Info("Resetting fullCombo to true");
             fullCombo = true;
+            private GameObject ref = Plugin.bdc;
+            ref.GetComponent<NoteEventBroadcaster>().Initialize();
         }
 
         [HarmonyPatch("HandleNoteWasMissed")]
